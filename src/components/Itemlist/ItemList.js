@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ItemList.module.scss'
 import cx from 'classnames';
+import withCollapsed from '../../hoc/withCollapsed'
 
 const items = [
   `1. Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.`,
@@ -10,41 +11,41 @@ const items = [
   `5. Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.`,
 ];
 
-class ItemList extends React.Component {
-  constructor(props){
-    super(props)
-    this.state={
-      isCollapsed: false
-    }
-  }
+// class ItemList extends React.Component {
+// constructor(props){
+//   super(props)
+//   this.state={
+//     isCollapsed: false
+//   }
+// }
 
-  toggle = () => {
-    this.setState(prevState => ({
-      isCollapsed: !prevState.isCollapsed
-    }));
-   };
+// toggle = () => {
+//   this.setState(prevState => ({
+//     isCollapsed: !prevState.isCollapsed
+//   }));
+//  };
 
-  render() {
+// render() {
+const ItemList = ({ toggle, isCollapsed}) => {
+  const classList = cx(styles.list, {
+    [styles.isCollapsed]: isCollapsed
+  })
 
-    const classList = cx(styles.list, {
-      [styles.isCollapsed]: this.state.isCollapsed
-    })
+  return (
+    <div>
+      <button className="button is-link is-rounded" onClick={toggle}>Collapse</button>
 
-    return (
-      <div>
-        <button className="button is-link is-rounded" onClick={this.toggle}>Collapse</button>
+      <ul className={classList}>
+        {items.map(item => (
+          <li className='notification is-primary'>{item}</li>
+        ))}
+      </ul>
 
-        <ul className={classList}>
-          {items.map(item => (
-            <li className='notification is-primary'>{item}</li>
-          ))}
-        </ul>
-
-        <p>State isCollapsed is: {this.state.isCollapsed.toString()}</p>
-      </div>
-    )
-  }
-
+      <p>State isCollapsed is: {isCollapsed.toString()}</p>
+    </div>
+  )
 }
 
-export default ItemList;
+// }
+
+export default withCollapsed(ItemList);
