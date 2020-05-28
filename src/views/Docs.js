@@ -4,7 +4,7 @@ import ItemList from '../components/Itemlist/ItemList';
 const Docs = () => {
   return (
     <>
-      <h1 className="title is-3 is-spaced">Docs</h1>
+      <h1 className="title is-3 is-spaced">Docs #hoc #withCollapsed</h1>
       <ItemList />
     </>
   )
