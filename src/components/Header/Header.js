@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 
 const Header = () => (
-  <div class="hero is-primary is-bold">
+  <div className="hero is-primary is-bold">
 
     <div className="hero-body">
       <div className="container has-text-centered">

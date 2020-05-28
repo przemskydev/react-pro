@@ -22,7 +22,7 @@ const withCollapsed = (WrappedComponent) => {
         <WrappedComponent
           toggle={this.toggle}
           isCollapsed={isCollapsed}
-          
+          {...this.props}
         />
       )
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './App.module.scss'
-import cx from 'classnames';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import Components from './views/Components';

@@ -5,7 +5,7 @@ const Tips = () => {
   return (
     <>
       <h1 className="title is-3 is-spaced">Tips</h1>
-      <ItemColumn />
+      <ItemColumn text='Hello World'/>
     </>
   )
 }

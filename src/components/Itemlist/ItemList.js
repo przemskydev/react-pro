@@ -26,7 +26,7 @@ const items = [
 //  };
 
 // render() {
-const ItemList = ({ toggle, isCollapsed}) => {
+const ItemList = ({ toggle, isCollapsed }) => {
   const classList = cx(styles.list, {
     [styles.isCollapsed]: isCollapsed
   })
@@ -34,14 +34,14 @@ const ItemList = ({ toggle, isCollapsed}) => {
   return (
     <div>
       <button className="button is-link is-rounded" onClick={toggle}>Collapse</button>
+      <p>State isCollapsed is: {isCollapsed.toString()}</p>
 
       <ul className={classList}>
         {items.map(item => (
-          <li className='notification is-primary'>{item}</li>
+          <li key={item} className='notification is-primary'>{item}</li>
         ))}
       </ul>
 
-      <p>State isCollapsed is: {isCollapsed.toString()}</p>
     </div>
   )
 }

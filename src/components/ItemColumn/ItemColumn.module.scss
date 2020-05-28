@@ -1,7 +1,7 @@
 .list {
-  margin-top: 50px;
-} 
-
+  margin-top: 50px !important;
+  display: block;
+}
 .isCollapsed {
   max-width: 0;
   overflow: hidden;
