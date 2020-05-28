@@ -1,29 +1,15 @@
 import React from 'react';
-import styles from './ItemColumn.module.scss'
+import styles from './ItemColumn.module.scss';
 import cx from 'classnames';
-import withCollapsed from '../../hoc/withCollapsed'
-import withAuth from '../../hoc/withAuth'
+import withCollapsed from '../../hoc/withCollapsed';
+import withAuth from '../../hoc/withAuth';
+import { compose } from 'recompose';
 
-// class ItemColumn extends React.Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       isCollapsed: false
-//     }
-//   }
-
-//   toggle = () => {
-//     this.setState(prevState => ({
-//       isCollapsed: !prevState.isCollapsed
-//     }));
-//   };
-
-//   render() {
 const ItemColumn = ({ isAuth, toggleAuth, toggle, isCollapsed, text }) => {
   const classList = cx("columns", {
     [styles.isCollapsed]: isCollapsed
   }, styles.list
-  )
+  );
 
   return (
     <div >
@@ -50,14 +36,15 @@ const ItemColumn = ({ isAuth, toggleAuth, toggle, isCollapsed, text }) => {
             </div>
           </div>
         ) : (
-          <p class="subtitle is-3">You have to log in to see content</p>
-        )
+            <p class="subtitle is-3">You have to log in to see content</p>
+          )
       }
 
     </div>
   )
 }
-// }
 
-
-export default withAuth(withCollapsed(ItemColumn));
+export default compose(
+  withAuth,
+  withCollapsed
+)(ItemColumn);

@@ -11,21 +11,6 @@ const items = [
   `5. Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.`,
 ];
 
-// class ItemList extends React.Component {
-// constructor(props){
-//   super(props)
-//   this.state={
-//     isCollapsed: false
-//   }
-// }
-
-// toggle = () => {
-//   this.setState(prevState => ({
-//     isCollapsed: !prevState.isCollapsed
-//   }));
-//  };
-
-// render() {
 const ItemList = ({ toggle, isCollapsed }) => {
   const classList = cx(styles.list, {
     [styles.isCollapsed]: isCollapsed
@@ -45,7 +30,5 @@ const ItemList = ({ toggle, isCollapsed }) => {
     </div>
   )
 }
-
-// }
 
 export default withCollapsed(ItemList);
