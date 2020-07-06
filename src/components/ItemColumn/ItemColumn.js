@@ -36,7 +36,7 @@ const ItemColumn = ({ isAuth, toggleAuth, toggle, isCollapsed, text }) => {
             </div>
           </div>
         ) : (
-            <p class="subtitle is-3">You have to log in to see content</p>
+            <p className="subtitle is-3">You have to log in to see content</p>
           )
       }
 

@@ -25,7 +25,7 @@ const ItemList = () => {
         <ul className={classList(isCollapsed)}>
           {items.map(item => (
             <li key={item} className='notification is-primary'>{item}</li>
-          ))}
+          ))} 
         </ul>
 
       </div>

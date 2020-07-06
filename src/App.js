@@ -7,6 +7,7 @@ import Docs from './views/Docs';
 import Elements from './views/Elements';
 import Patterns from './views/Patterns';
 import Tips from './views/Tips';
+import Hook1 from './views/Hook1';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/patterns' component={Patterns} />
         <Route exact path='/elements' component={Elements} />
         <Route exact path='/components' component={Components} />
+        <Route exact path='/usestate' component={Hook1} />
       </div>
     </Router>
   );

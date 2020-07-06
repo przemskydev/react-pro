@@ -1,8 +1,12 @@
 import React from 'react'
+import ItemCollAuth from '../components/ItemCollAuth/ItemCollAuth'
 
 const Elements = () => {
   return(
-    <h1 className="title is-3 is-spaced">Elements</h1>
+    <div>
+      <h1 className="title is-3 is-spaced">Elements #renderProps #Collapsed #Authorisation</h1>
+      <ItemCollAuth />
+    </div>
   )
 }
 
