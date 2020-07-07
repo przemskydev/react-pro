@@ -1,26 +1,25 @@
-import React, { useRef } from 'react'
-
-const style = {
-  transition: "transform 1s ease-in-out",
-  width: '100px',
-  transformOrigin: '0% 50%',
-  display: 'block'
-}
+import React, { useRef, useEffect } from 'react'
+import styles from './Hook3.module.scss';
+import cx from 'classnames';
+import gsap from 'gsap'
 
 const HookThree = () => {
 
-  const myInputRef = useRef(null);
+  const boxRef = useRef(null);
 
-  const handleClick = () => {
-    myInputRef.current.focus()
-    myInputRef.current.style.transform = 'scaleX(2)'
-  };
+  useEffect(()=>{
+    gsap.from(boxRef.current, {
+      duration: 2,
+      y: '100%',
+      x: '-100%',
+      opacity: 0,
+    })
+  })
 
   return (
     <div>
       <h1>Hello World!</h1>
-      <input style={style} ref={myInputRef}/>
-      <button onClick={handleClick}>Focus input</button>
+      <div ref={boxRef} className={styles.box}/>
     </div>
   )
 }
