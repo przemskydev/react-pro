@@ -11,7 +11,7 @@ const items = [
   { value: 'banana' },
 ]
 
-const Components = () => (
+const RenderProps3 = () => (
   <Downshift>
     {({
       isOpen,
@@ -22,7 +22,7 @@ const Components = () => (
       selectedItem
     }) => (
         <div>
-          <h1 className="title is-3 is-spaced">Components #renderprops #downshift 🏎</h1>
+          <h1 className="title is-3 is-spaced">RenderProps3 #renderprops #downshift 🏎</h1>
 
           <div className={cx('dropdown', {
             'is-active': isOpen
@@ -57,5 +57,5 @@ const Components = () => (
   </Downshift>
 )
 
-export default Components;
+export default RenderProps3;
 

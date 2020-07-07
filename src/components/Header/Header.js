@@ -20,25 +20,25 @@ const Header = () => (
         <div className="container">
           <ul>
             <li>
-              <NavLink to='/'>Docs</NavLink>
+              <NavLink to='/'>HOC #1</NavLink>
             </li>
             <li>
-              <NavLink to='/tips'>Tips</NavLink>
+              <NavLink to='/hoc'>HOC #2</NavLink>
             </li>
             <li>
-              <NavLink to='/patterns'>Patterns</NavLink>
+              <NavLink to='/renderprops1'>Render Props #1</NavLink>
             </li>
             <li>
-              <NavLink to='/elements'>Elements</NavLink>
+              <NavLink to='/renderprops2'>Render Props #2</NavLink>
             </li>
             <li>
-              <NavLink to='/components'>Components</NavLink>
+              <NavLink to='/renderprops3'>RP & DownShift</NavLink>
             </li>
             <li>
-              <NavLink to='/usestate'>HOOK #1</NavLink>
+              <NavLink to='/usestate'>useState</NavLink>
             </li>
             <li>
-              <NavLink to='/components'>HOOK #2</NavLink>
+              <NavLink to='/usereducer'>useReducer</NavLink>
             </li>
             <li>
               <NavLink to='/components'>HOOK #3</NavLink>
