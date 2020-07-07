@@ -41,7 +41,7 @@ const Header = () => (
               <NavLink to='/usereducer'>useReducer</NavLink>
             </li>
             <li>
-              <NavLink to='/components'>HOOK #3</NavLink>
+              <NavLink to='/useref'>useRef</NavLink>
             </li>
           </ul>
         </div>
