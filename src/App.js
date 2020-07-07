@@ -2,12 +2,14 @@ import React from 'react';
 import styles from './App.module.scss'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './components/Header/Header';
-import Components from './views/Components';
-import Docs from './views/Docs';
-import Elements from './views/Elements';
-import Patterns from './views/Patterns';
-import Tips from './views/Tips';
+import Hoc from './views/Hoc';
+import Hoc2 from './views/Hoc2';
+import RenderProps1 from './views/RenderProps1';
+import RenderProps2 from './views/RenderProps2';
+import RenderProps3 from './views/RenderProps3';
 import Hook1 from './views/Hook1';
+import Hook2 from './views/Hook2';
+
 
 
 function App() {
@@ -15,12 +17,13 @@ function App() {
     <Router>
       <Header />
       <div className={styles.app}>
-        <Route exact path='/' component={Docs} />
-        <Route exact path='/tips' component={Tips} />
-        <Route exact path='/patterns' component={Patterns} />
-        <Route exact path='/elements' component={Elements} />
-        <Route exact path='/components' component={Components} />
+        <Route exact path='/' component={Hoc} />
+        <Route exact path='/hoc' component={Hoc2} />
+        <Route exact path='/renderprops1' component={RenderProps1} />
+        <Route exact path='/renderprops2' component={RenderProps2} />
+        <Route exact path='/renderprops3' component={RenderProps3} />
         <Route exact path='/usestate' component={Hook1} />
+        <Route exact path='/usereducer' component={Hook2} />
       </div>
     </Router>
   );

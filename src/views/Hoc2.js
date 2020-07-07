@@ -1,14 +1,14 @@
 import React from 'react'
 import ItemColumn from '../components/ItemColumn/ItemColumn';
 
-const Tips = () => {
+const Hoc2 = () => {
   return (
     <>
-      <h1 className="title is-3 is-spaced">Tips #hoc #withCollapsed #withAuth</h1>
+      <h1 className="title is-3 is-spaced">Hoc2 #hoc #withCollapsed #withAuth</h1>
       <ItemColumn text='Hello World'/>
     </>
   )
 }
 
-export default Tips;
+export default Hoc2;
 
