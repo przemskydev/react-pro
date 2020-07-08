@@ -9,19 +9,16 @@ const reducer = (state, action) => {
         ...state,
         [action.field]: action.value,
       }
-      break;
     case 'add-item':
       return {
         ...state,
         itemList: [...state.itemList, action.payload]
       }
-      break;
     case 'remove-item':
       return {
         ...state,
         itemList: [...state.itemList.filter(item => item.id !== action.payload.id)]
       }
-      break;
     default:
       break;
   }

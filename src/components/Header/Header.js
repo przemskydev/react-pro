@@ -43,6 +43,9 @@ const Header = () => (
             <li>
               <NavLink to='/useref'>useRef</NavLink>
             </li>
+            <li>
+              <NavLink to='/context'>Context</NavLink>
+            </li>
           </ul>
         </div>
       </nav>

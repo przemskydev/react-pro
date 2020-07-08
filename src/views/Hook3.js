@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react'
 import styles from './Hook3.module.scss';
-import cx from 'classnames';
 import gsap from 'gsap'
 
 const HookThree = () => {
