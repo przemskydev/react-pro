@@ -46,6 +46,12 @@ const Header = () => (
             <li>
               <NavLink to='/context'>Context</NavLink>
             </li>
+            <li>
+              <NavLink to='/compound'>Compound Component #1</NavLink>
+            </li>
+            <li>
+              <NavLink to='/compound2'>Compound Component #1</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
