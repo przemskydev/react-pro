@@ -11,21 +11,21 @@ const Compound = () => (
       <MultiStep.Page pageId={1}>
         <div className="box">
           <p>What's your name</p>
-          <input class="input" type="text" placeholder="First name"/>
+          <input className="input" type="text" placeholder="First name"/>
         </div>
       </MultiStep.Page>
 
       <MultiStep.Page pageId={2}>
         <div className="box">
           <p>Last name?</p>
-          <input class="input" type="text" placeholder="Last name"/>
+          <input className="input" type="text" placeholder="Last name"/>
         </div>
       </MultiStep.Page>
 
       <MultiStep.Page pageId={3}>
         <div className="box">
           <p>Give your email</p>
-          <input class="input" type="email" placeholder="email"/>
+          <input className="input" type="email" placeholder="email"/>
         </div>
       </MultiStep.Page>
 
