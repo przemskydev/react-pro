@@ -9,6 +9,10 @@ import RenderProps2 from './views/RenderProps2';
 import RenderProps3 from './views/RenderProps3';
 import Hook1 from './views/Hook1';
 import Hook2 from './views/Hook2';
+import HookThree from './views/Hook3';
+import ContextComponent from './views/ContextComponent';
+import Compound from './views/Compound';
+import Compound2 from './views/Compound2';
 
 
 
@@ -24,6 +28,10 @@ function App() {
         <Route exact path='/renderprops3' component={RenderProps3} />
         <Route exact path='/usestate' component={Hook1} />
         <Route exact path='/usereducer' component={Hook2} />
+        <Route exact path='/useref' component={HookThree} />
+        <Route exact path='/context' component={ContextComponent} />
+        <Route exact path='/compound' component={Compound} />
+        <Route exact path='/compound2' component={Compound2} />
       </div>
     </Router>
   );
