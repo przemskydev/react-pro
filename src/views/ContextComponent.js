@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 const MyContext = React.createContext();
 
 const User = () => {
+  const context = useContext(MyContext);
+
   return (
-    <MyContext.Consumer>
-      {(context) => (
-        <p>My name is: {context.name}</p>
-      )}
-    </MyContext.Consumer>
+    <div>
+      <p>My name iz: {context.name}</p>
+    </div>
   )
 }
 
 const ContextComponent = () => (
   <div>
-    <MyContext.Provider value={{ name: 'Brzemeg'}}>
+    <MyContext.Provider value={{ name: 'Brzemeg' }}>
       <h1>Hello World!</h1>
       <User />
     </MyContext.Provider>
