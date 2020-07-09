@@ -12,7 +12,7 @@ import Hook2 from './views/Hook2';
 import HookThree from './views/Hook3';
 import ContextComponent from './views/ContextComponent';
 import Compound from './views/Compound';
-import Compound2 from './views/Compound2';
+import Testing from './views/Testing';
 
 
 
@@ -31,7 +31,7 @@ function App() {
         <Route exact path='/useref' component={HookThree} />
         <Route exact path='/context' component={ContextComponent} />
         <Route exact path='/compound' component={Compound} />
-        <Route exact path='/compound2' component={Compound2} />
+        <Route exact path='/testing' component={Testing} />
       </div>
     </Router>
   );

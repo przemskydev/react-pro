@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Router } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div data-testid='sample-test' className="hero is-primary is-bold">
@@ -50,7 +50,7 @@ const Header = () => (
               <NavLink to='/compound'>Compound Component #1</NavLink>
             </li>
             <li>
-              <NavLink to='/compound2'>Compound Component #1</NavLink>
+              <NavLink to='/testing'>Testing #1</NavLink>
             </li>
           </ul>
         </div>
