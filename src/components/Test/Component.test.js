@@ -9,7 +9,7 @@ describe('Header component', () => {
     const placeholderTxt = "FirstName";
 
     const { getByPlaceholderText } = render(
-      <Input placeholder={placeholderTxt} />
+      <Input placeholder={placeholderTxt} name='name' label='name' />
     );
 
     expect(getByPlaceholderText(placeholderTxt)).toBeInTheDocument()
@@ -17,7 +17,7 @@ describe('Header component', () => {
   test('default props display', () => {
     const defaultProps = "Your value";
     const { getByPlaceholderText } = render(
-      <Input />
+      <Input name='name' label='name' />
     );
     expect(getByPlaceholderText(defaultProps)).toBeInTheDocument()
 
@@ -33,14 +33,28 @@ describe('Header component', () => {
     expect(getByLabelText(/name/i)).toHaveValue('Brzemeg');
 
   });
-  test('display proper value', () => {
+  // test('display proper value', () => {
 
-    const { getByLabelText } = render(<Input name='name' label='name' />)
-    const inputTxt = getByLabelText(/name/i)
-    
-    fireEvent.change(inputTxt, { target: { value: 'Brzemeg123' } })
+  //   const { getByLabelText } = render(<Input name='name' label='name' />)
+  //   const inputTxt = getByLabelText(/name/i)
 
-    expect(getByLabelText(/name/i)).toHaveValue('Brzemeg');
+  //   fireEvent.change(inputTxt, { target: { value: 'Brzemeg123' } })
 
+  //   expect(getByLabelText(/name/i)).toHaveValue('Brzemeg');
+
+  // })
+  test('show error when digits passed', () => {
+    const { getByLabelText, container } = render(<Input name='name' label='name' />);
+
+    const input = getByLabelText(/name/i);
+
+    fireEvent.change(input, { target: { value: 'Brzemeg' } })
+    expect(container).not.toHaveTextContent(/error/i);
+
+    fireEvent.change(input, { target: { value: 'Brzemeg123' } })
+    expect(container).toHaveTextContent(/error/i);
+
+    fireEvent.change(input, { target: { value: 'Brzemeg' } })
+    expect(container).not.toHaveTextContent(/error/i);
   })
 })
