@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, Router } from 'react-router-dom';
 
 const Header = () => (
-  <div className="hero is-primary is-bold">
+  <div data-testid='sample-test' className="hero is-primary is-bold">
 
     <div className="hero-body">
       <div className="container has-text-centered">
