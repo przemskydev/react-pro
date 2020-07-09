@@ -7,6 +7,14 @@ const WrapperContext = React.createContext({
   updatePageNum: () => { }
 });
 
+const ProgressBar = () => {
+  const context = useContext(WrapperContext)
+
+  return (
+    <progress className="progress" value={(context.currentPage / context.pageIds.length) * 100} max="100">15%</progress>
+  )
+}
+
 const Page = ({ children, pageId }) => {
   const context = useContext(WrapperContext)
 
@@ -78,4 +86,4 @@ const Wrapper = ({ children }) => {
   )
 }
 
-export { Page, Controls, Wrapper };
+export { Page, ProgressBar, Controls, Wrapper };
