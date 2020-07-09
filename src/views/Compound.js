@@ -30,7 +30,7 @@ const Compound = () => (
       </MultiStep.Page>
 
       <MultiStep.Controls />
-
+      <MultiStep.ProgressBar />
     </MultiStep.Wrapper>
   </div>
 )
